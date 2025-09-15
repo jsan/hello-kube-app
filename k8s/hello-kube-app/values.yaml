@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: hello-kube-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+  host: hello-kube.local
+  annotations: {}
+
+app:
+  message:
+    country: "PORTUGAL!!!!"
+
